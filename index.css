@@ -2,53 +2,35 @@
     --color-accent: #6800c9;
 }
 
-.pdf {
-    height: 100%;
-    width: 100%;
-    z-index: 2;
-}
-
-.pdf--hidden {
-    display: none;
-}
-
-.pdf__wrapper {
-    position: relative;
-    z-index: 1;
+.resizer_container {
+    padding-bottom: 1rem;
+    padding-right: 1rem;
     overflow: hidden;
     resize: both;
     height: 500px;
     width: 600px;
 }
 
-.pdf__wrapper::-webkit-resizer {
-    position: absolute;
+.resizer_container::-webkit-resizer {
     width: .25rem;
     height: .25rem;
     border-radius: .2rem;
     background-color: var(--color-accent);
 }
 
-.pdf__wrapper:hover {
+.resizer_container:hover {
     outline: solid var(--color-accent) .1rem;
 }
 
-.pdf__placeholder {
-    display: none;
+.pdf__container {
+    position: relative;
     height: 100%;
     width: 100%;
-    background-color: grey;
 }
 
-.pdf__placeholder__title {
-    display: block;
-    color: white;
-    text-align: center;
+.pdf {
+    height: 100%;
     width: 100%;
-}
-
-.pdf__placeholder--show {
-    display: block;
 }
 
 .pdf__overlay {
@@ -57,5 +39,5 @@
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 }
